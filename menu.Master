@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="menu.Master.cs" Inherits="pet_shelter.menu" ClientIDMode="Static"%>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Pet Shelter</title>
+    <link rel="Stylesheet" href="css/myProjectStyles.css" />
+    <link rel="icon" href="website_symbol.png">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="icon" href="website_symbol.png">
+        <link rel="Stylesheet" href="../css/myProjectStyles.css" />
+        <script src="../js/myProjectCode.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">      
+        <ul>
+            <li><a id="pgHome" runat="server" href="pages/index.aspx">Home</a></li>
+            <li id="liPuppies" runat="server"><a id="pgPuppies" runat="server" href="pages/Puppies.aspx">Puppies</a></li>
+            <li id="liKittens" runat="server"><a id="pgKittens" runat="server" href="pages/Kittens.aspx">Kittens</a></li>
+            <li id="liRodents" runat="server"><a id="pgRodents" runat="server" href="pages/Rodents.aspx">Rodents</a></li>
+            <li id="liTurtles" runat="server"><a id="pgTurtles" runat="server" href="pages/Turtles.aspx">Turtles</a></li>
+            <li id="liHorses" runat="server"><a id="pgHorses" runat="server" href="pages/Horses.aspx">Horses</a></li>
+            <li id="liAdmin1" runat="server"><a id="pgAdmin1" runat="server" href="pages/Admin1.aspx">Admin1</a></li>
+            <li id="liAdmin2" runat="server"><a id="pgAdmin2" runat="server" href="pages/Admin2.aspx">Admin2</a></li>
+            <li id="liUser" runat="server" style="float: right"><a id="aUser" runat="server" onserverclick="aUser_ServerClick"><%=Session["User"]%></a></li>
+            <li id="liLogout" runat="server" style="float:right"><a href="home.aspx" id="aLogout" runat="server" onserverclick="aLogout_ServerClick">Logout</a></li>
+
+        </ul>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+                    <div id="bottomRow" >
+                | שחר דמארי ונתנאל איזקוב 2022 | פרויקט סופי |
+            </div>
+    </form>
+</body>
+</html>
